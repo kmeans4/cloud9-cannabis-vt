@@ -1357,40 +1357,71 @@
 
 .marquee {
   object-fit: fill;
-  background-color: #a4cea3;
-  justify-content: space-around;
+  background: linear-gradient(90deg, #2d5a3d 0%, #3d7a4d 50%, #2d5a3d 100%);
+  justify-content: flex-start;
   min-width: 240vw;
-  padding-bottom: 20px;
+  padding: 30px 0;
   display: flex;
   overflow: hidden;
+  position: relative;
+}
+
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, #2d5a3d, transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(-90deg, #2d5a3d, transparent);
 }
 
 .wrapper {
   flex: none;
-  justify-content: space-around;
-  min-width: 120vw;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: auto;
   display: flex;
   overflow: hidden;
+  gap: 40px;
 }
 
 .list {
-  justify-content: space-around;
-  min-width: 120vw;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: auto;
   display: flex;
   overflow: hidden;
+  gap: 40px;
 }
 
 .image-5 {
-  width: 20vw;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .collection-item {
   justify-content: center;
   align-self: center;
-  min-width: 20vw;
+  min-width: auto;
   display: flex;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .section-6 {
@@ -1421,14 +1452,26 @@
 .link-block-3 {
   color: #fff;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 20vw;
+  width: auto;
+  min-width: 140px;
   max-width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 15px 20px;
   text-decoration: none;
   display: flex;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 12px;
+}
+
+.link-block-3:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.link-block-3:hover .image-5 {
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 .loading {
@@ -3457,12 +3500,15 @@
 .store-name {
   color: #fff;
   text-align: center;
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;
   font-family: "Inter", sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Marquee Animation */
+/* Marquee Animation - Smooth infinite scroll */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -3473,9 +3519,24 @@
 }
 
 .wrapper {
-  animation: scroll 30s linear infinite;
+  animation: scroll 40s linear infinite;
+  will-change: transform;
 }
 
 .wrapper:hover {
   animation-play-state: paused;
+}
+
+/* Section 3 styling for Find Us header */
+.section-3 {
+  background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
+  padding: 50px 20px 30px;
+  text-align: center;
+}
+
+.section-3 .subheading1.findus {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
