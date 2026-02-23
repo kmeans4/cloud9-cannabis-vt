@@ -3458,3 +3458,21 @@
   margin-top: 10px;
   font-family: "Inter", sans-serif;
 }
+
+/* Marquee Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.wrapper {
+  animation: scroll 30s linear infinite;
+}
+
+.wrapper:hover {
+  animation-play-state: paused;
+}
