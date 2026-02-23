@@ -952,7 +952,7 @@
 }
 
 .section {
-  background-image: url('../images/matthew-brodeur-qcCPIhhdgTw-unsplash.jpg');
+  background-image: url('/images/matthew-brodeur-qcCPIhhdgTw-unsplash.jpg');
   background-position: 0 0;
   background-size: cover;
   width: 100vw;
@@ -1081,7 +1081,7 @@
 }
 
 .image {
-  background-image: url('../images/shopping-cart-1.svg');
+  background-image: url('/images/shopping-cart-1.svg');
   background-position: 0 0;
   background-size: auto;
   width: 80px;
@@ -1734,7 +1734,7 @@
 }
 
 .text-underline {
-  background-image: url('../images/Underline.svg');
+  background-image: url('/images/Underline.svg');
   background-position: 50% 110%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -2165,7 +2165,7 @@
 .background-layer {
   z-index: 0;
   background-color: #d8d5d1;
-  background-image: url('../images/Grain-Background.png'), url('../images/Gaussian-Blur---Brighter.svg');
+  background-image: url('/images/Grain-Background.png'), url('/images/Gaussian-Blur---Brighter.svg');
   background-position: 0 0, 50% 80%;
   background-repeat: repeat, no-repeat;
   background-size: 300px 300px, cover;
@@ -2326,7 +2326,7 @@
 }
 
 .section-7 {
-  background-image: url('../images/IMG_1202.jpg');
+  background-image: url('/images/IMG_1202.jpg');
   background-position: 50%;
   background-size: cover;
   flex-direction: column;
