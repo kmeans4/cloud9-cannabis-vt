@@ -3536,3 +3536,13 @@
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+
+/* Fix timeline progress bar - hide when past timeline */
+.timeline_progress-bar {
+  max-height: calc(100% - 200px);
+}
+
+.section-timeline-cta ~ .contactus .timeline_progress-bar,
+.section-timeline-cta ~ * .timeline_progress-bar {
+  display: none !important;
+}
