@@ -3546,3 +3546,21 @@
 .section-timeline-cta ~ * .timeline_progress-bar {
   display: none !important;
 }
+
+/* Mobile fix: Ensure last timeline items display correctly with progress bar */
+@media screen and (max-width: 479px) {
+  .timeline_progress-bar {
+    height: 40vh;
+    max-height: 300px;
+  }
+
+  .timeline_item:last-child,
+  .timeline_item:nth-last-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .timeline_item:last-child .timeline_right,
+  .timeline_item:nth-last-child(2) .timeline_right {
+    margin-bottom: 40px;
+  }
+}
