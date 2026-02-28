@@ -3489,6 +3489,21 @@
   #w-node-_9d84c0da-2364-b339-72de-76d9c2666d8d-3fb9f69b {
     grid-area: 1 / 1 / 3 / 2;
   }
+  #w-node-gas-light-left {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  #w-node-gas-light-centre {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
+  #w-node-randys-candy-left {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  #w-node-randys-candy-centre {
+    grid-area: 1 / 1 / 3 / 2;
+  }
 }
 
 
